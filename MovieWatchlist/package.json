@@ -1,0 +1,33 @@
+{
+  "name": "movie-series-watchlist",
+  "version": "1.0.0",
+  "description": "A personal desktop movie and series watchlist manager",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron .",
+    "dist": "electron-builder --win"
+  },
+  "devDependencies": {
+    "electron": "^37.2.0",
+    "electron-builder": "^26.0.12"
+  },
+  "build": {
+    "appId": "com.watchlist.cinevault",
+    "productName": "CineVault",
+    "directories": {
+      "output": "release"
+    },
+    "files": [
+      "main.js",
+      "preload.js",
+      "src/**/*",
+      "package.json"
+    ],
+    "win": {
+      "target": "nsis"
+    }
+  },
+  "allowScripts": {
+    "electron@37.10.3": true
+  }
+}
